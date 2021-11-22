@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container, .header, .banner, .menu-bar, .main{
+    width: 100%;
+}
+
+.banner{
+    display: flex;
+}
+
+.banner h2{
+    position: absolute;
+    color:darkcyan;
+    padding-left: 30px;
+}
+
+.banner h3{
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 35px;
+    font-family:cursive;
+    font-style: italic;
+    color: mediumblue;
+}
+
+.menu-bar{
+    background-color:green;
+    display: flex;
+}
+
+.menu-bar ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-bar ul li{
+    text-transform: uppercase;
+    border-right: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu-bar ul li:hover{
+    background-color: pink;
+}
+
+.menu-bar .right{
+    background-color: orange;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0px;
+}
+
+.main{
+    margin-left: 10px;
+    margin-top: 70px;
+    display: flex;
+}
+.content-right{
+    width: 70%;
+    margin-right: 10px;
+    border-right: 1px solid #dae0e0;
+}
+
+.content-left{
+    width: 25%;
+    margin-left: 80px;
+}
+
+.titlebar{
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+    padding: 10px 90px 10px 10px;
+    border-radius: 20px 5px;
+}
+
+.content-left ul{
+    list-style: none;
+    line-height: 30px;
+    color:forestgreen
+}
+
+.content-left ul li{
+    margin-right: 120px;
+    border-bottom: 1px solid #dae0e0;
+}

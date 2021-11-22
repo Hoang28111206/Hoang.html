@@ -1,0 +1,114 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container, .header, .banner, .main, .footer, .menu-bar{
+    width: 100%;
+}
+
+.menu-bar{
+    position: absolute;
+    display: flex;
+}
+
+.menu-bar h1{
+    color: white;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.menu-bar ul{
+    display: flex;
+    list-style:none;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 45px;
+    margin-left: 80px;
+    
+}
+
+.menu-bar ul li{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(241, 241, 241, 0.288);
+    cursor: pointer;
+}
+
+.menu-bar ul li:hover{
+    color: tomato;
+}
+
+section{
+    width: 80%;
+    display: flex;
+    margin-left: 130px;
+}
+
+.content1, .content2, .content3, .content4{
+    width: 20%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 50px;
+}
+
+.info{
+    margin-top: 50px;
+}
+
+.info ul{
+    color: white;
+    text-transform: capitalize;
+    position: absolute;
+    list-style: none;
+    display: flex;
+    font-size: 25px;
+    margin: 60px;
+    
+}
+
+.info ul li{
+    padding-left: 120px;
+}
+
+.footer{
+    margin-top: 70px;
+    background-color: black;
+    height: 300px;
+}
+
+.footer section{
+    width: 80%;
+    display: flex;
+    padding-top: 30px;
+}
+
+.content-left, .content-right{
+    width: 20%;
+    display: block;
+}
+
+.footer ul{
+    color: grey;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.content-center{
+    width: 60%;
+    border-left: 1px grey;
+    border-right: 1px grey;
+    border-style: dotted;
+    display: block;
+    text-align: center;
+}
+
+button{
+    font-size: 25px;
+    border-radius: 10px 10px 10px 10px;
+    border-inline: none;
+}
