@@ -1,0 +1,155 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container, .header, .banner, .menu-bar, .main, .footer{
+    width: 100%;
+} 
+
+.header{
+    background-color: #1b7047;
+    display: flex;
+}
+
+.banner{
+    display:flex;
+    margin-top: 40px;
+}
+.left{
+    width: 90%;
+}
+
+#title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+}
+
+.banner span{
+    color: white;
+}
+
+.right{
+    float:right;
+    border: 1px solid greenyellow;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    width: 10%;
+    display: flex;
+    border-radius: 5px;
+}
+
+#icon{
+    border-right: 1px solid greenyellow; 
+    background-color: greenyellow;
+    padding: 10px 5px 5px;
+    
+}
+
+.menu-bar{
+    background-color: #1b7047;
+    display: flex;
+    border-top: 1px solid #33403a;
+    border-bottom: 5px solid #33403a ;
+}
+
+.menu-bar ul{
+    color: white;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-bar ul li{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu-bar ul li:hover{
+    background-color:#33403a ;
+}
+
+.right2{
+    padding-left: 400px;
+}
+
+.main-content{
+    width: 80%;
+    display: flex;
+    margin: 20px 0px 20px 160px;  
+}
+
+.content1, .content2, .content3, .content4{
+    text-align: left;
+    border: 1px solid;
+    color: white;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    font-size: 15px;
+    padding: 10px 25px 0px;
+    margin-right: 10px;
+}
+
+#contentIcon{
+    padding:5px 10px 5px 0px;
+}
+
+.content1{
+    background-color:#24d1b7;
+}
+
+.content2{
+    background-color: red;
+}
+
+.content3{
+    background-color: green;
+}
+
+.content4{
+    background-color: orangered;
+}
+
+.main-content ul{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    border-bottom: 1px solid gray;
+}
+
+.main-content ul li{
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.display{
+    display: block;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.display b{
+    color: orangered;
+}
+
+.footer{
+    background-color: black;
+    height: 200px;
+    margin-top: 70px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 40px;
+    font-size: 20px;
+}
