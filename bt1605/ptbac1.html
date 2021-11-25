@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+    <h3>Giải phương trình bậc nhất</h3>
+
+    <script>
+        function ptbac1(a,b){
+            x = -(b/a)
+            return x
+        }
+        a = parseInt(prompt('Nhập số nguyên a:'))
+        b = parseInt(prompt('Nhập số nguyên b:'))
+        x = ptbac1(a,b)
+        document.write(`Giải phương trình: ${a}x + ${b} = 0 <br><br> =>  x = ${x}`)
+        
+    </script>
+</body>
+</html>

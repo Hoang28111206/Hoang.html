@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Ket qua cua phep tinh:</h1>
+    
+    <script>
+        function tong(x,y){
+            a = x + y
+            return a
+        }
+
+        function hieu(x,y){
+            a = x - y
+            return a
+        }
+
+        function tich(x,y){
+            a = x * y
+            return a
+        }
+
+        function chia(x,y){
+            a = x / y
+            return a
+        }
+
+        x = prompt('Nhap x: ')
+        y = prompt('Nhap y: ')
+        m = prompt('Nhap phep toan: ')
+        switch (m) {
+            case '+':
+                a = tong(parseInt(x),parseInt(y))
+                document.write(`${x} + ${y} = ${a}`)
+                break;
+            case '-':
+                a = hieu(parseInt(x),parseInt(y))
+                document.write(`${x} - ${y} = ${a}`)
+                break;
+            case '*':
+                a = tich(parseInt(x),parseInt(y))
+                document.write(`${x} * ${y} = ${a}`)
+                break;
+            case '/':
+                a = chia(parseInt(x),parseInt(y))
+                document.write(`${x} / ${y} = ${a}`)
+                break;
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
