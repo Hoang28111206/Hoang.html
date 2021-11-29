@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students List</title>
+</head>
+<body>
+    <script>
+        var studentList = [
+            {
+                'name' : 'Nguyen Van A',
+                'age' : 20,
+                'address' : 'Ha Noi',
+                'phone' : '0969122123',
+                'email' : 'nguyenvana@gmail.com'
+            },
+            {
+                'name' : 'Nguyen Van B',
+                'age' : 28,
+                'address' : 'Ha Noi',
+                'phone' : '0969122123',
+                'email' : 'nguyenvana@gmail.com'
+            },
+            {
+                'name' : 'Nguyen Van C',
+                'age' : 25,
+                'address' : 'Ha Noi',
+                'phone' : '0969122123',
+                'email' : 'nguyenvana@gmail.com'
+            },
+            {
+                'name' : 'Nguyen Van D',
+                'age' : 23,
+                'address' : 'Ha Noi',
+                'phone' : '0969122123',
+                'email' : 'nguyenvana@gmail.com'
+            },
+            {
+                'name' : 'Nguyen Van E',
+                'age' : 22,
+                'address' : 'Ha Noi',
+                'phone' : '0969122123',
+                'email' : 'nguyenvana@gmail.com'
+            },
+        ]
+    </script>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>STT</th>
+        <th>Ho Ten</th>
+        <th>Tuoi</th>
+        <th>Dia chi</th>
+        <th>SDT</th>
+        <th>Email</th>
+    </tr>
+    <script>
+        index = 0
+            for (const a of studentList) {
+                document.write(`
+                    <tr>
+                        <td>${++index}</td>
+                        <td>${a.name}</td>
+                        <td>${a.age}</td>
+                        <td>${a.address}</td>
+                        <td>${a.phone}</td>
+                        <td>${a.email}</td>
+                    </tr>
+                `) 
+            }
+    </script>
+</table>
+</body>
+</html>
