@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <link rel="stylesheet" href="loan.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <b>Loan Application Form</b>
+        </div>
+        <div class="content">
+            <form action="post">
+                <fieldset>
+                    <legend>
+                        <span>Applicant's Personal Information</span>
+                    </legend>
+                    <div class="main-content">    
+                        <div class="center-content">
+                            <label>Full Name:</label>
+                            <br>
+                            <label>Date of Birth (MM/dd/yyyy):</label>
+                            <br>
+                            <label>Phone Number:</label>
+                            <br>
+                            <label>Address:</label>
+                            <br>
+                            <label>ZIP Code:</label>
+                            <br>
+                        </div>
+                        <div class="center-content2">
+                            <input type="text" name="name" id="name" size="70" pattern="[a-zA-Z ]" required>
+                            <br>
+                            <input type="date" name="dob" id="dob" required>
+                            <br>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10,16}" required>
+                            <br>
+                            <input type="text" name="address" id="address" size="70" required>
+                            <br>
+                            <input type="text" name="zip" id="zip" size="3" pattern="[0-9]" required> -
+                            <input type="text" name="zip" id="zip" size="4" pattern="[0-9]" required> -
+                            <input type="text" name="zip" id="zip" size="3" pattern="[0-9]" required>
+                        </div>
+                    </div>    
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        <span>Applicant's Employment Information</span>
+                    </legend>
+                    <div class="main-content">
+                        <div class="center-content">
+                            <label>Current Employer:</label>
+                            <br>
+                            <label>Employer Address:</label>
+                            <br>
+                            <label>Date of Joining (MM/dd/yyyy):</label>
+                            <br>
+                            <label>Phone Number:</label>
+                            <br>
+                            <label>Email ID:</label>
+                            <br>
+                            <label>Fax:</label>
+                            <br>
+                            <label>Designation:</label>
+                            <br>
+                            <label>Annual Income ($):</label>
+                            <br>
+                        </div>
+                        <div class="center-content2">
+                            <input type="text" name="employname" id="employname" size="70" required>
+                            <br>
+                            <input type="text" name="employadd" id="employadd" size="70" required>
+                            <br>
+                            <input type="date" name="doj" id="doj" required>
+                            <br>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{10,16}" required>
+                            <br>
+                            <input type="email" name="emailid" id="emailid" size="30" required>
+                            <br>
+                            <input type="text" name="fax" id="fax" size="3" required> -
+                            <input type="text" name="fax" id="fax" size="7" required>
+                            <br>
+                            <input type="text" name="designation" id="designation" size="30" required>
+                            <br>
+                            <input type="text" name="income" id="income" pattern="[0-9]" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        <span>Loan Information</span>
+                    </legend>
+                    <div class="main-content">
+                        <div class="center-content">
+                            <label>Loan Type:</label>
+                            <br>
+                            <label>Principal ($):</label>
+                            <br>
+                            <label>Period (Months):</label>
+                            <br>
+                            <label>Interest (%):</label>
+                        </div>
+                        <div class="center-content2">
+                            <select name="loan" id="loan" required>
+                                <option>--Select--</option>
+                                <option>Personal Loan</option>
+                                <option>Home Loan</option>
+                                <option>Vehicle Loan</option>
+                                <option>Business Loan</option>
+                                <option>Education Loan</option>
+                            </select>
+                            <br>
+                            <input type="text" name="principal" id="principal" pattern="[0-9]" required>
+                            <br>
+                            <input type="text" name="period" id="period" pattern="[0-9]" required>
+                            <br>
+                            <input type="text" name="interest" id="interest" pattern="[0-9]" required>
+                        </div> 
+                    </div>
+                    <div class="main-content">
+                        <div class="button">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
