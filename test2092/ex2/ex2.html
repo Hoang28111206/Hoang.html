@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <img src="img/regis.png" width="80px">
+            <h3>Phiếu mượn sách</h3>
+        </div>
+        <form action="post">
+            <div class="main-content">
+                <div class="main-content1">
+                    <label>Mã sinh viên</label>
+                    <br>
+                    <label>Họ và tên</label>
+                    <br>
+                    <label>Loại sách</label>
+                    <br>
+                    <label>Tên sách</label>
+                    <br>
+                    <label>Ngày mượn</label>
+                    <br>
+                    <label>Ngày trả</label>
+                </div>
+                <div class="main-content2">
+                    <input type="text" name="stdid" id="stdid">
+                    <br>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <select name="booktype" id="booktype">
+                        <option >--Chọn loại sách--</option>
+                    </select>
+                    <br>
+                    <input type="text" name="bookname" id="bookname">
+                    <br>
+                    <input type="text" name="loandate" id="loandate">
+                    <br>
+                    <input type="text" name="backdate" id="backdate">
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit"><img src="img/log_in.png" alt=""> Đăng ký</button>
+                <button type="reset"><img src="img/cancel.png" alt=""> Nhập lại</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
