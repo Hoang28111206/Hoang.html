@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Products</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <div class="container">
+        <div class="border border-primary rounded-2">
+            <div class="border-bottom border-primary bg-primary text-white p-2">
+                Input product's detail information
+            </div>
+            <div class="container">
+                <form>
+                    <div class="form-group mt-2">
+                        <label for="product" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" ng-model="product">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="cate">Category Name</label>
+                        <select class="form-select" ng-model="cate" ng-options="x.name for x in category">
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="manu">Manufacturer Name</label>
+                        <select class="form-select" ng-model="manu" ng-options="x for x in cate.product">
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="product" class="form-label">Price</label>
+                        <input type="text" class="form-control" ng-model="price" ng-keyup="result()">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="text" class="form-control" ng-model="quantity" ng-keyup="result()">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="total" class="form-label">Total Price</label>
+                        <input type="text" class="form-control" ng-model="total" disabled>
+                    </div>
+                    <div class="mt-3">
+                        <button type="button" class="btn btn-success" ng-click="addproduct()">Add Product</button>
+                        <button type="button" class="btn btn-warning text-white" ng-click="resetall()">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="border border-primary rounded-2">
+            <div class="border-bottom border-primary bg-primary text-white p-2">
+                Management Products
+            </div>
+            <div class="container m-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Category Name</th>
+                            <th>Manufacturer Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in productListAdd">
+                            <td>{{$index + 1}}</td>
+                            <td>{{item.product}}</td>
+                            <td>{{item.category.name}}</td>
+                            <td>{{item.manufacturer}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td><button type="button" class="btn btn-warning" ng-click="edititem($index)">Edit</button></td>
+                            <td><button type="button" class="btn btn-danger" ng-click="deleteitem($index)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller("myCtrl", function($scope){
+            $scope.category = [
+                {name: "Apple", product: ["Iphone", "Ipad", "Ipod"]},
+                {name: "Samsung", product: ["S1", "S2", "S3"]},
+                {name: "LG", product: ["L1", "L2", "L3"]}
+            ]
+
+            $scope.result = function(){
+                $scope.total = $scope.price * $scope.quantity
+            }
+
+            $scope.productListAdd = []
+            $scope.addproduct = function(){
+                
+                if($scope.currentindex >= 0){
+                    $scope.productListAdd[$scope.currentindex].product = $scope.product
+                    $scope.productListAdd[$scope.currentindex].category = $scope.cate
+                    $scope.productListAdd[$scope.currentindex].manufacturer = $scope.manu
+                    $scope.productListAdd[$scope.currentindex].price = $scope.price
+                    $scope.productListAdd[$scope.currentindex].quantity = $scope.quantity
+
+                    $scope.currentindex = -1
+                    return
+                }
+                var productList = {
+                    'product': $scope.product,
+                    'category': $scope.cate,
+                    'manufacturer': $scope.manu,
+                    'price': $scope.price,
+                    'quantity': $scope.quantity  
+                }
+                $scope.productListAdd.push(productList)
+            }
+
+            $scope.resetall = function(){
+                $scope.product = ''
+                $scope.cate = ''
+                $scope.manu = ''
+                $scope.price = ''
+                $scope.quantity = ''
+                $scope.total = ''
+            }
+
+            $scope.currentindex = -1
+            $scope.edititem = function(index){
+                $scope.currentindex = index
+
+                $scope.product = $scope.productListAdd[index].product
+                $scope.cate = $scope.productListAdd[index].category
+                $scope.manu = $scope.productListAdd[index].manufacturer
+                $scope.price = $scope.productListAdd[index].price
+                $scope.quantity = $scope.productListAdd[index].quantity
+            }
+
+            $scope.deleteitem = function(index){
+                $scope.productListAdd.splice(index, 1)
+            }
+        });
+    </script>
+</body>
+</html>
